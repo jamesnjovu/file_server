@@ -5,11 +5,11 @@ const app = express();
 const port = 3000;
 
 // Serve static files from the "pop" directory
-app.use('/images', express.static(path.join(__dirname, 'pop')));
+app.use('/files', express.static(path.join(__dirname, 'pop')));
 
 // Home route (optional)
 app.get('/', (req, res) => {
-  res.send('Image server is running. Use /images/{filename} to access images.');
+  res.send('Image server is running. Use /files/{filename} to access files.');
 });
 
 // Start the server
